@@ -3,8 +3,8 @@
 ### *step (en)*
 
 - First, you can clone this repo
-- then, you npm i to install all package include moleculer
-- then, you node service1.js to running service1 and also to service2.js
+- then, you `npm i` to install all package include moleculer
+- then, you `node service1.js` to running service1 and also to service2.js
 - finnaly, you can CRUD the data with postman, insomnia, etc
 
 ### *keterangan (Id)*
