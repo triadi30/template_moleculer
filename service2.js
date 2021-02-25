@@ -8,57 +8,6 @@ const brokerNode2 = new ServiceBroker({
 });
 
 brokerNode2.createService({
-  name: "users",
-  mixins: [DbService],
-
-  settings: {
-    fields: ["_id", "name", "email", "address"],
-    entityValidator: {
-			name: "string"
-		}
-   },
-
-  actions: {
-    listUsers: {
-    	async handler(ctx) {
-    		return this.broker.call("users.find", {});
-    	}
-    },
-    createUsers: {
-         params: {
-              name: { type: "string", min: 2 },
-              email: { type: "email", min: 1 },
-              address: {type: "string", min:5}
-            },
-    	async handler(ctx) {
-    		return this.broker.call("users.create", ctx.params);
-    	}
-    },
-    updateUsers: {
-         params: {
-              name: { type: "string", min: 2 },
-              email: { type: "email", min: 1 },
-              address: {type: "string", min:5}
-            },
-    	async handler(ctx) {
-    		return this.broker.call("users.create", ctx.params);
-    	}
-    },
-    deleteUsers: {
-    	async handler(ctx) {
-    		return this.broker.call("users.remove", ctx.params);
-    	}
-    },
-  },
-});
-
-const brokerNode3 = new ServiceBroker({
-  namespace: "dev",
-  nodeID: "node-3",
-  transporter: "NATS"
-});
-
-brokerNode3.createService({
   name: "transaction",
   mixins: [DbService],
 
@@ -122,6 +71,6 @@ brokerNode3.createService({
   }
 });
 
-Promise.all([brokerNode2.start(), brokerNode3.start()]).then(() => {
-  brokerNode3.repl();
+Promise.all([brokerNode2.start()]).then(() => {
+  brokerNode2.repl();
 });
