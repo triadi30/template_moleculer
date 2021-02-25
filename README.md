@@ -1,14 +1,14 @@
 # template_moleculer
 
-```step (en)
-```
+*### step (en)*
+
 - First, you can clone this repo
 - then, you npm i to install all package include moleculer
 - then, you node service1.js to running service1 and also to service2.js
 - finnaly, you can CRUD the data with postman, insomnia, etc
 
-```keterangan (Id)
-```
+*### keterangan (Id)*
+
 - Template ini berisikan 2 service, yaitu : service untuk gateway*wajib* dan service untuk pengelolaan transaksi
 - Pada template ini, berisi 5 endpoint yakni : 
   1. Insert data transaksi
