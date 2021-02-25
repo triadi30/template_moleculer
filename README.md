@@ -5,6 +5,7 @@
 - First, you can clone this repo
 - then, you `npm i` to install all package include moleculer
 - then, you `node service1.js` to running service1 and also to service2.js
+- dont forget to running nats server with command `nats-server` in your terminal 
 - finnaly, you can CRUD the data with postman, insomnia, etc
 
 ### *keterangan (Id)*
